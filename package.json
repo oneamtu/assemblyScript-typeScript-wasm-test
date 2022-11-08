@@ -1,0 +1,40 @@
+{
+  "name": "nonstationary-k-armed-testbed",
+  "version": "1.0.0",
+  "description": "Nonstationary k armed experiment",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests",
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "start": "npx serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/verymeta/nonstationary-k-armed-testbed.git"
+  },
+  "keywords": [
+    "reinforcement_learning",
+    "machine_learning"
+  ],
+  "author": "Octavian Neamțu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/verymeta/nonstationary-k-armed-testbed/issues"
+  },
+  "homepage": "https://gitlab.com/verymeta/nonstationary-k-armed-testbed#readme",
+  "dependencies": {
+    "assemblyscript": "^0.22.0"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.22.0"
+  }
+}
