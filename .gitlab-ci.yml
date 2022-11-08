@@ -19,6 +19,7 @@ stages:
 build:
   stage: build
   script:
+    - npm install -D
     - npm run asbuild
 
 eslint:
